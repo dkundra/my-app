@@ -8,10 +8,13 @@ import AppBootstrap from './AppBootstrap';
 import AppState from './AppState';
 import AppStateTimer from './AppStateTimer';
 import AppProps from './AppProps';
+import AppComponentDidMount from './AppComponentDidMount';
+import AppUpdatingPhase from './AppUpdatingPhase';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div><App /><Login/><AppBootstrap/><AppState/><AppStateTimer/><AppProps element2="React"/></div>
+    <div><App /><Login/><AppBootstrap/><AppState/><AppStateTimer/><AppProps element2="React"/><AppComponentDidMount/>
+    <AppUpdatingPhase/></div>
   </React.StrictMode>,
   document.getElementById('root')
 );
