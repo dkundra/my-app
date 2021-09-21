@@ -5,10 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './Login';
 import AppBootstrap from './AppBootstrap';
+import AppState from './AppState';
+import AppStateTimer from './AppStateTimer';
+import AppProps from './AppProps';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div><App /><Login/><AppBootstrap/></div>
+    <div><App /><Login/><AppBootstrap/><AppState/><AppStateTimer/><AppProps element2="React"/></div>
   </React.StrictMode>,
   document.getElementById('root')
 );
