@@ -1,31 +1,27 @@
 import React from "react";
 
 class AppStateTimer extends React.Component {
-constructor() {
-    super();
+constructor(props) {
+    super(props);
     this.state = {
         count: 0
     }
 }
 
-update = () => {
-       this.setState( {
-           count: this.state.count +1
-               })
-}
-
-handleClick = (e) => {
-    this.interval = setInterval(this.update,1000);
+start = () => {
+    this.setState({
+    count: this.state.count + 1
+    });
 }
 render() {
-     return (
-         <React.Fragment><br/><br/>
-         <button onClick = {this.handleClick}>Star Timer</button>
-           <h2>Seconds Elapsed: {this.state.count}</h2>       
-         </React.Fragment>
-     )
-
-}
+    if (this.state.count > 5) {
+        throw new Error('Count cannot be greater than 5 ')
+    }
+    return ( <React.Fragment>
+            <h1>{this.state.count}</h1><br/>
+           <button onClick={this.start}>Updated</button> 
+        </React.Fragment>);
+    }
 
 }
 

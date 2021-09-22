@@ -10,10 +10,11 @@ import AppStateTimer from './AppStateTimer';
 import AppProps from './AppProps';
 import AppComponentDidMount from './AppComponentDidMount';
 import AppUpdatingPhase from './AppUpdatingPhase';
+import AppErrorHandler from './AppErrorHandler';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div><App /><Login/><AppBootstrap/><AppState/><AppStateTimer/><AppProps element2="React"/><AppComponentDidMount/>
+    <div><App /><Login/><AppBootstrap/><AppState/><AppErrorHandler/><AppStateTimer/><AppProps element2="React"/><AppComponentDidMount/>
     <AppUpdatingPhase/></div>
   </React.StrictMode>,
   document.getElementById('root')
